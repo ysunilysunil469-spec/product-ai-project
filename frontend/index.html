@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f7f4"><title>ProductTalk AI — Meet your next favourite</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/"><span class="brand-mark">✳</span><span>product<span class="brand-accent">talk</span><small>AI SHOPPING, WITH A VOICE</small></span></a>
+    <nav><a href="#discover">Discover</a><a href="#how">How it works</a><a class="nav-pill" href="/docs" target="_blank" rel="noreferrer">API docs ↗</a></nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy"><div class="eyebrow"><span class="live-dot"></span> A NEW WAY TO SHOP</div>
+        <h1>Don't just browse.<br><em>Have a conversation.</em></h1>
+        <p>Meet the products. Ask the awkward questions. Find the one that actually fits your life.</p>
+        <a class="primary-btn" href="#discover">Meet the products <span>↓</span></a>
+        <div class="hero-proof"><span class="avatars">✦ ◉ ✳</span><span>Curious questions welcome.<br><b>Honest answers only.</b></span></div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a talking T-shirt">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><span class="spark spark-a">✦</span><span class="spark spark-b">✳</span><span class="spark spark-c">✧</span>
+        <div class="floating-note note-top"><span class="note-icon">✦</span><span><b>Ask me anything</b><small>Fabric, fit, and more</small></span></div>
+        <div class="hero-shirt shirt-hero"><div class="shirt-neck"></div><div class="shirt-face"><span></span><span></span><i></i></div><div class="shirt-logo">PT.</div></div>
+        <div class="floating-note note-bottom"><span class="sound-bars"><i></i><i></i><i></i><i></i></span><span><b>Actually listens</b><small>Powered by product facts</small></span></div>
+        <div class="hero-caption">YOUR NEXT FAVOURITE HAS A VOICE</div>
+      </div>
+    </section>
+
+    <section class="discover section" id="discover">
+      <div class="section-heading"><div><div class="eyebrow">THE PRODUCT LINEUP</div><h2>Pick a personality.</h2><p>Every product has a story. Tap one to hear it.</p></div>
+        <label class="searchbox"><span>⌕</span><input id="searchInput" type="search" placeholder="Search products..."></label></div>
+      <div class="filters" id="filters"><button class="filter active" data-category="all">All products</button><button class="filter" data-category="T-shirts">T-shirts</button><button class="filter" data-category="Shirts">Shirts</button></div>
+      <div class="product-grid" id="productGrid"><div class="loading-card">Getting the products ready…</div></div>
+    </section>
+
+    <section class="truth-banner"><div class="truth-symbol">✓</div><div><div class="eyebrow">THE PRODUCTTALK PROMISE</div><h2>Curious, not pushy.</h2><p>Good shopping advice tells you what a product is <i>and</i> what it doesn't know. Missing facts stay missing — no made-up claims.</p></div><div class="truth-stamp">FACTS FIRST<br><span>✳</span></div></section>
+
+    <section class="how section" id="how"><div class="eyebrow">THREE LITTLE STEPS</div><h2>Shopping, with a little more <em>personality.</em></h2><div class="steps"><article><span class="step-num">01</span><div class="step-icon">👀</div><h3>Meet your match</h3><p>Explore the details and find a product that feels right for you.</p></article><article><span class="step-num">02</span><div class="step-icon">💬</div><h3>Ask the real questions</h3><p>Ask about material, occasions, care, price, or what to consider before buying.</p></article><article><span class="step-num">03</span><div class="step-icon">♡</div><h3>Choose with confidence</h3><p>Get grounded answers and transparent details, including what isn't known.</p></article></div></section>
+  </main>
+  <footer><a class="brand footer-brand" href="/"><span class="brand-mark">✳</span><span>product<span class="brand-accent">talk</span><small>AI SHOPPING, WITH A VOICE</small></span></a><span>Made for more thoughtful shopping. <b>✳</b></span><span class="demo-note">Portfolio demo · Sample product data</span></footer>
+
+  <div class="modal-backdrop" id="talkModal" aria-hidden="true">
+    <section class="talk-modal" role="dialog" aria-modal="true" aria-labelledby="modalProductName">
+      <button class="close-modal" id="closeModal" aria-label="Close product conversation">×</button>
+      <div class="talk-product-panel" id="talkProductPanel"><div class="character-stage" id="characterStage"><div class="character-glow"></div><div class="character-shirt" id="characterShirt"><div class="character-collar"></div><div class="character-eyes"><i></i><i></i></div><div class="character-mouth"></div><span class="character-logo">pt.</span></div><div class="speech-wave" id="speechWave"><i></i><i></i><i></i><i></i><i></i></div><div class="character-caption">YOUR PRODUCT, IN PERSON</div></div>
+        <div class="talk-product-info"><div class="eyebrow">NOW INTRODUCING</div><h2 id="modalProductName">Everyday Cotton Tee</h2><div class="talk-price" id="modalPrice">₹599</div><div class="mini-facts" id="miniFacts"></div><div class="origin-note" id="originNote">ⓘ Product facts are based on the demo listing.</div></div>
+      </div>
+      <div class="conversation-panel"><div class="conversation-head"><div><span class="online-dot"></span><b id="characterStatus">Your product is here</b><small>Answers grounded in its product details</small></div><button id="voiceToggle" class="voice-toggle" title="Toggle spoken answers">🔊 Voice on</button></div>
+        <div class="conversation-log" id="conversationLog"><div class="welcome-message"><span class="tiny-spark">✳</span><div><b>Hey there! I'm all ears.</b><p>Ask me about my material, fit, care, price, or where I'm made.</p></div></div></div>
+        <div class="quick-questions" id="quickQuestions"><button>Good for summer?</button><button>Why shouldn't I buy you?</button><button>Where are you made?</button><button>How should I care for you?</button></div>
+        <form class="talk-form" id="talkForm"><button type="button" class="mic-btn" id="micBtn" title="Speak a question" aria-label="Speak a question">🎙</button><input id="questionInput" maxlength="1000" placeholder="Ask me anything…" autocomplete="off" required><button class="send-btn" type="submit" aria-label="Send question">↑</button></form><div class="conversation-foot">AI can make mistakes. Check product labels and seller policies.</div>
+      </div>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="/static/app.js" defer></script>
+</body></html>
